@@ -91,7 +91,6 @@ const picArray = [
     },
   },
 ];
-console.log(picArray[1]);
 // add your code here
 
 let articles = document.getElementById(`pictures`);
