@@ -20,7 +20,7 @@ let studentList = document.getElementById(`target`);
 
 for (let i = 0; i < students.length; ++i) {
   let option = document.createElement(`option`);
-  option.setAttribute(`value`, `${students[i].id}`)
+  option.setAttribute(`value`, `${students[i].id}`);
   option.innerText = students[i].name;
   studentList.appendChild(option);
 }

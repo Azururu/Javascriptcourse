@@ -100,7 +100,7 @@ for (let i = 0; i < picArray.length; ++i) {
   let article = document.createElement(`article`);
   article.setAttribute(`class`, `card`);
   article.innerHTML = `<h2>${picArray[i].title}</h2>` +
-      `<figure><img src="${picArray[i].image}" alt="${picArray[i].title}"><figcaption>${picArray[i].caption}</figcaption></figure>` +
+      `<figure><img src="${picArray[i].image.medium}" alt="${picArray[i].title}"><figcaption>${picArray[i].caption}</figcaption></figure>` +
       `<p>${picArray[i].description}</p>`;
   articles.appendChild(article);
 }
