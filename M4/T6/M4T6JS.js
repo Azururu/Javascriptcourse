@@ -9,15 +9,16 @@ let articleList = document.getElementById("result");
 const chuckForm = document.querySelector("#chuck-form");
 chuckForm.addEventListener('submit', async function(event) {
   event.preventDefault();
-  const value_from_input = document.querySelector("#query").value;
+  const value_from_input = document.getElementById('query').value;
   try {
     const response = await fetch(`https://api.chucknorris.io/jokes/search?query=${value_from_input}`);
-    const jsonData = await response.json();
+    const arrays = await response.json();
+    const result = arrays.result
     articleList.innerHTML = '';
-    for (let i = 0; i < jsonData.length; i++) {
+    for (let i = 0; i < result.length; i++) {
       let article = document.createElement(`article`);
       let p = document.createElement(`p`);
-      p.innerText = `${jsonData.result.value}`;
+      p.innerText = `${result[i].value}`;
       article.appendChild(p);
       articleList.appendChild(article);
     }
